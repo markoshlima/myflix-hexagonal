@@ -1,0 +1,71 @@
+//MOVIE
+[{"id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "name":"Inception", "year":"2010"},
+{"id_movie":"f9b0e37f-feab-4747-85fd-6b376685a63f", "name":"Shutter island", "year":"2010"},
+{"id_movie":"d37f69de-f839-46d3-857e-cd531af0065c", "name":"Catch me if you can", "year":"2002"},
+{"id_movie":"69aa8cde-14f7-48c8-98a9-509cfa8215b7", "name":"Harry Potter and Sourcere's stone", "year":"2001"},
+{"id_movie":"e86805b0-9cf8-4877-8d8f-a886f50dc751", "name":"Alice in the Wonderland", "year":"2016"}]
+
+//ACTOR
+[{"id_actor":"bc85aa97-dbbc-4cd2-ac4d-35db2099866c", "name":"Leonardo diCaprio", "birth_date":"153370800"},
+{"id_actor":"1fd5690d-4e10-4a6f-9e37-2fc212ca66ba", "name":"Tom Hardy", "birth_date":"243140400"},
+{"id_actor":"dd5cf38b-b8e8-434d-afa6-04e9cd707303", "name":"Cillian Murphy", "birth_date":"201841200"},
+{"id_actor":"f3139f81-a9d8-4dcd-8176-1135e2027860", "name":"Marion Cotillard", "birth_date":"181278000"},
+{"id_actor":"bed16d63-dcb2-45f4-b3ad-7f9fd72d4bbc", "name":"Elliot Page", "birth_date":"540874800"},
+{"id_actor":"79f7b7f6-6db5-4028-92cf-f764e483b4cf", "name":"Mark Ruffalo", "birth_date":"-66607200"},
+{"id_actor":"a9f38df3-e2b9-47a1-bea0-92ea4eddbae1", "name":"Ben Kingsley", "birth_date":"-820616400"} ,
+{"id_actor":"d5904fd4-58b9-4e1f-9002-639ea6b05363", "name":"Michelle Williams", "birth_date":"337383189"},
+{"id_actor":"662042ae-b6a1-49d7-b889-c349c3f0f1bb", "name":"Emily Mortimer", "birth_date":"55566000"},
+{"id_actor":"0e7e1feb-cbd8-4e4b-aff8-5abff7001349", "name":"Tom Hanks", "birth_date":"-425422800"},
+{"id_actor":"89010ceb-c38c-4b82-bf09-90dca07fc8e6", "name":"Amy Adams", "birth_date":"148878000"}, 
+{"id_actor":"63f89ef2-4635-4826-8b6c-ace172186f49", "name":"Christopher Walken", "birth_date":"-844376400"},
+{"id_actor":"4c7e9512-b22b-4fbd-8bab-bf816430cdcb", "name":"Jennifer Garner", "birth_date":"72327600"}, 
+{"id_actor":"f64123f8-df55-4ad2-b146-115c94e3696c", "name":"Daniel Radcliffe", "birth_date":"617166000"}, 
+{"id_actor":"2f9a75ee-3444-4017-ad90-6200d7b53fc4", "name":"Emma Watson", "birth_date":"640148400"}, 
+{"id_actor":"2f9a75ee-3444-4017-ad90-6200d7b53fc4", "name":"Rupert Grint", "birth_date":"588394800"}, 
+{"id_actor":"87e7f7c6-f004-44e9-a5ee-7b115181fdbc", "name":"Tom Felton", "birth_date":"559278000"}, 
+{"id_actor":"3c2a0c9f-ba5b-41fc-803c-6c4ad07fac01", "name":"Alan Rickman", "birth_date":"-752965200"}, 
+{"id_actor":"acc963f4-5cba-4356-8227-70307be62a06", "name":"Johnny Depp", "birth_date":"-207109611"}, 
+{"id_actor":"e7547b7d-e900-4a33-ba85-9ec39383a26e", "name":"Mia Wasikowska", "birth_date":"625284000"}, 
+{"id_actor":"ee372aa5-550b-446c-a5c1-ba7da14cb7ec", "name":"Anne Hathaway", "birth_date":"405918000"}, 
+{"id_actor":"01adff6e-abc0-4d34-a446-aded5a93ea27", "name":"Helena Bonham", "birth_date":"-113711211"}] 
+
+//CHARACTER
+[{"id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "id_actor":"bc85aa97-dbbc-4cd2-ac4d-35db2099866c", "name":"Coob"},
+{"id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "id_actor":"1fd5690d-4e10-4a6f-9e37-2fc212ca66ba", "name":"Eames"},
+{"id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "id_actor":"dd5cf38b-b8e8-434d-afa6-04e9cd707303", "name":"Fisher"},
+{"id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "id_actor":"f3139f81-a9d8-4dcd-8176-1135e2027860", "name":"Mal"},
+{"id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "id_actor":"bed16d63-dcb2-45f4-b3ad-7f9fd72d4bbc", "name":"Ariadne"},
+{"id_movie":"f9b0e37f-feab-4747-85fd-6b376685a63f", "id_actor":"bc85aa97-dbbc-4cd2-ac4d-35db2099866c", "name":"Teddy Daniels"},
+{"id_movie":"f9b0e37f-feab-4747-85fd-6b376685a63f", "id_actor":"79f7b7f6-6db5-4028-92cf-f764e483b4cf", "name":"Chuck Aule"},
+{"id_movie":"f9b0e37f-feab-4747-85fd-6b376685a63f", "id_actor":"a9f38df3-e2b9-47a1-bea0-92ea4eddbae1", "name":"Dr. John"},
+{"id_movie":"f9b0e37f-feab-4747-85fd-6b376685a63f", "id_actor":"d5904fd4-58b9-4e1f-9002-639ea6b05363", "name":"Dolores"},
+{"id_movie":"f9b0e37f-feab-4747-85fd-6b376685a63f", "id_actor":"662042ae-b6a1-49d7-b889-c349c3f0f1bb", "name":"Rachel"},
+{"id_movie":"d37f69de-f839-46d3-857e-cd531af0065c", "id_actor":"bc85aa97-dbbc-4cd2-ac4d-35db2099866c", "name":"Frank Abgnale Jr"},
+{"id_movie":"d37f69de-f839-46d3-857e-cd531af0065c", "id_actor":"0e7e1feb-cbd8-4e4b-aff8-5abff7001349", "name":"Carl Hanratty"},
+{"id_movie":"d37f69de-f839-46d3-857e-cd531af0065c", "id_actor":"89010ceb-c38c-4b82-bf09-90dca07fc8e6", "name":"Brenda"},
+{"id_movie":"d37f69de-f839-46d3-857e-cd531af0065c", "id_actor":"63f89ef2-4635-4826-8b6c-ace172186f49", "name":"Franck Abgnale Sr"},
+{"id_movie":"d37f69de-f839-46d3-857e-cd531af0065c", "id_actor":"4c7e9512-b22b-4fbd-8bab-bf816430cdcb", "name":"Cheryl"},
+{"id_movie":"69aa8cde-14f7-48c8-98a9-509cfa8215b7", "id_actor":"f64123f8-df55-4ad2-b146-115c94e3696c", "name":"Harry Potter"},
+{"id_movie":"69aa8cde-14f7-48c8-98a9-509cfa8215b7", "id_actor":"2f9a75ee-3444-4017-ad90-6200d7b53fc4", "name":"Hermione"},
+{"id_movie":"69aa8cde-14f7-48c8-98a9-509cfa8215b7", "id_actor":"2f9a75ee-3444-4017-ad90-6200d7b53fc4", "name":"Ronald Wisley"},
+{"id_movie":"69aa8cde-14f7-48c8-98a9-509cfa8215b7", "id_actor":"87e7f7c6-f004-44e9-a5ee-7b115181fdbc", "name":"Draco Malfoy"},
+{"id_movie":"69aa8cde-14f7-48c8-98a9-509cfa8215b7", "id_actor":"3c2a0c9f-ba5b-41fc-803c-6c4ad07fac01", "name":"Severus Snape"},
+{"id_movie":"e86805b0-9cf8-4877-8d8f-a886f50dc751", "id_actor":"acc963f4-5cba-4356-8227-70307be62a06", "name":"Crazzy Hatter"},
+{"id_movie":"e86805b0-9cf8-4877-8d8f-a886f50dc751", "id_actor":"e7547b7d-e900-4a33-ba85-9ec39383a26e", "name":"Alice"},
+{"id_movie":"e86805b0-9cf8-4877-8d8f-a886f50dc751", "id_actor":"ee372aa5-550b-446c-a5c1-ba7da14cb7ec", "name":"White Queen"},
+{"id_movie":"e86805b0-9cf8-4877-8d8f-a886f50dc751", "id_actor":"01adff6e-abc0-4d34-a446-aded5a93ea27", "name":"Red Queen"},
+{"id_movie":"e86805b0-9cf8-4877-8d8f-a886f50dc751", "id_actor":"3c2a0c9f-ba5b-41fc-803c-6c4ad07fac01", "name":"Lizard"}]
+
+//WATCH
+[{"id_customer":"392ac11c-ebdf-4e44-9033-205b33782ee5", "id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "date":"1633093200"},
+{"id_customer":"392ac11c-ebdf-4e44-9033-205b33782ee5", "id_movie":"f9b0e37f-feab-4747-85fd-6b376685a63f", "date":"1633136400"},
+{"id_customer":"392ac11c-ebdf-4e44-9033-205b33782ee5", "id_movie":"d37f69de-f839-46d3-857e-cd531af0065c", "date":"1635778800"},
+{"id_customer":"392ac11c-ebdf-4e44-9033-205b33782ee5", "id_movie":"e86805b0-9cf8-4877-8d8f-a886f50dc751", "date":"1636470000"},
+{"id_customer":"90c0edd4-1b8c-477a-8357-2d08845a9fa7", "id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "date":"1631199600"},
+{"id_customer":"1ae88b21-98f0-4c10-9f2e-2d7bc4f6f3f1", "id_movie":"be31ffef-fd7c-4ae3-9ec5-b9456209bd1f", "date":"1612882800"},
+{"id_customer":"1ae88b21-98f0-4c10-9f2e-2d7bc4f6f3f1", "id_movie":"69aa8cde-14f7-48c8-98a9-509cfa8215b7", "date":"1598968800"}]
+
+//CUSTOMER
+[{"id_customer":"392ac11c-ebdf-4e44-9033-205b33782ee5", "name":"João", "birth_date":"632109600"},
+{"id_customer":"90c0edd4-1b8c-477a-8357-2d08845a9fa7", "name":"Maria", "birth_date":"967863600"},
+{"id_customer":"1ae88b21-98f0-4c10-9f2e-2d7bc4f6f3f1", "name":"José", "birth_date":"-605739600"}]
