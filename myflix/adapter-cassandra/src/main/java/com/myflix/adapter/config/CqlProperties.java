@@ -7,5 +7,4 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:cql.properties")
 public class CqlProperties {
 
-	
 }

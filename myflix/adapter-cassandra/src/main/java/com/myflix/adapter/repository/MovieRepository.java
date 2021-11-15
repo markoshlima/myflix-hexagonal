@@ -4,17 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import com.datastax.oss.driver.api.core.cql.ResultSet;
 import com.datastax.oss.driver.api.core.cql.Row;
-import com.myflix.adapter.config.CassandraConfig;
+import com.myflix.adapter.database.CassandraDriver;
 import com.myflix.domain.model.Movie;
 import com.myflix.domain.port.out.MoviePortOut;
 
 @Repository("movieCassandra")
 public class MovieRepository  implements MoviePortOut {
+	
+	@Autowired
+	private CassandraDriver driver;
 	
 	@Value("${movie.getall}")
 	private String movieGetAll;
@@ -31,20 +35,20 @@ public class MovieRepository  implements MoviePortOut {
 	@Override
 	public Movie save(Movie movie) {
 		movie.setIdMovie(UUID.randomUUID());
-		new CassandraConfig().getSession().execute(movieInsert, movie.getIdMovie(), movie.getName(), movie.getYear());
+		driver.getSession().execute(movieInsert, movie.getIdMovie(), movie.getName(), movie.getYear());
         return movie;
 		
 	}
 
 	@Override
 	public void delete(UUID idMovie) {
-		new CassandraConfig().getSession().execute(movieDelete, idMovie);
+		driver.getSession().execute(movieDelete, idMovie);
 	}
 
 	@Override
 	public List<Movie> getAll() {
 		List<Movie> movies = new ArrayList<Movie>();
-        ResultSet rs = new CassandraConfig().getSession().execute(movieGetAll);
+        ResultSet rs = driver.getSession().execute(movieGetAll);
         for(Row row : rs) {
         	Movie movie = new Movie();
         	movie.setIdMovie(row.getUuid("id_movie"));
@@ -59,7 +63,7 @@ public class MovieRepository  implements MoviePortOut {
 	@Override
 	public Movie getById(UUID idMovie) {
 		Movie movie = new Movie();
-        ResultSet rs = new CassandraConfig().getSession().execute(movieGet, idMovie);
+        ResultSet rs = driver.getSession().execute(movieGet, idMovie);
         Row row = rs.one();
         if(row != null) {
         	movie.setIdMovie(row.getUuid("id_movie"));
