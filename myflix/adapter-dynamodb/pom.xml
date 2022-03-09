@@ -9,16 +9,19 @@
 	</parent>
     <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>usecase</artifactId>
-	<name>usecase</name>
-	<description>Myflix UseCase (Service)</description>
+	<artifactId>adapter-dynamodb</artifactId>
+	<name>adapter-dynamodb</name>
+	<description>Myflix Adapter Dynamodb</description>
 	
 	<dependencies>
+       <dependency>
+            <groupId>com.myflix</groupId>
+            <artifactId>domain</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
        <dependency>
            <groupId>org.springframework</groupId>
@@ -29,25 +32,19 @@
            <artifactId>spring-context</artifactId>
            <optional>true</optional>
        </dependency>
-       <dependency>
-            <groupId>com.myflix</groupId>
-            <artifactId>domain</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency> 
-        <!-- <dependency> 
-            <groupId>com.myflix</groupId>
-            <artifactId>adapter-repository</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-         <dependency>
-            <groupId>com.myflix</groupId>
-            <artifactId>adapter-cassandra</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency> -->
         <dependency>
-            <groupId>com.myflix</groupId>
-            <artifactId>adapter-dynamodb</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.boostchicken</groupId>
+            <artifactId>spring-data-dynamodb</artifactId>
+            <version>5.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-dynamodb</artifactId>
+            <version>1.11.888</version>
         </dependency>
     </dependencies>
 
