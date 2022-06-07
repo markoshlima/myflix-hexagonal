@@ -18,20 +18,20 @@ import org.springframework.context.annotation.PropertySource;
 @EnableDynamoDBRepositories(basePackages = "com.myflix.adapter.dynamodb")
 public class DynamoDBDriver {
 
-	@Value("${aws.region}")
-	private String awsRegion;
+	//@Value("${amazon.aws.region}")
+	private String region = "";
 
-	@Value("${aws.dynamodb.endpoint}")
-	private String awsEndpoint;
+	//@Value("${amazon.aws.dynamodb.endpoint}")
+	private String endpoint = "";
 
-	@Value("${aws.accesskey}")
-	private String awsAccessKey;
+	//@Value("${amazon.aws.accesskey}")
+	private String accessKey = "";
 
-	@Value("${aws.secretkey}")
-	private String awsSecretKey;
+	//@Value("${amazon.aws.secretkey}")
+	private String secretKey = "";
 
 	public AWSCredentials amazonAWSCredendials(){
-		return new BasicAWSCredentials(awsAccessKey, awsSecretKey);
+		return new BasicAWSCredentials(accessKey, secretKey);
 	}
 
 	public AWSCredentialsProvider amazonAWSCredendialsProvider(){
@@ -43,8 +43,9 @@ public class DynamoDBDriver {
 	public AmazonDynamoDB amazonDynamoDB() {
 		return AmazonDynamoDBClientBuilder.standard()
 				.withCredentials(amazonAWSCredendialsProvider())
-				.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(awsEndpoint, awsRegion))
+				.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(endpoint, region))
 				.build();
 	}
+
 
 }
