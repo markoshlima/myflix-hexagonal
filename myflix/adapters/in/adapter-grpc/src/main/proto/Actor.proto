@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.myflix.adapter.grpc.protofiles.actor";
+option java_outer_classname = "ActorProto";
+
+message Actor {
+    string idActor = 1;
+    string name = 2;
+    int64 birthDate = 3;
+}
+
+message Character {
+    string idMovie = 1;
+    string idActor = 2;
+    string name = 3;
+}
+
+message saveRequest {
+  string name = 1;
+  int64 birthDate = 2;
+}
+
+message saveResponse {
+  Actor actor = 1;
+}
+
+message deleteRequest {
+  string idActor = 1;
+}
+
+message deleteResponse {
+}
+
+message getAllRequest {
+}
+
+message getAllResponse {
+  Actor actor = 1;
+}
+
+message getRequest {
+  string idActor = 1;
+}
+
+message getResponse {
+  Actor actor = 1;
+}
+
+message doCharacterRequest {
+  string idActor = 1;
+  string movieId = 2;
+  string name = 3;
+}
+
+message doCharacterResponse {
+}
+
+message getCharactersRequest {
+  string idActor = 1;
+}
+
+message getCharactersResponse {
+  Character character = 1;
+}
+
+
+service ActorService {
+  rpc save (saveRequest) returns (saveResponse) {}
+  rpc delete (deleteRequest) returns (deleteResponse) {}
+  rpc getAll (getAllRequest) returns (stream getAllResponse) {}
+  rpc get (getRequest) returns (stream getResponse) {}
+  rpc doCharacter (doCharacterRequest) returns (doCharacterResponse) {}
+  rpc getCharacters (getCharactersRequest) returns (stream getCharactersResponse) {}
+}

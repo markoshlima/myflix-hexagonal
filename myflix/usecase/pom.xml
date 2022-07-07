@@ -41,12 +41,12 @@
             <groupId>com.myflix</groupId>
             <artifactId>adapter-cassandra</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency> -->
-        <dependency>
+        </dependency> --> 
+        <dependency> 
             <groupId>com.myflix</groupId>
             <artifactId>adapter-dynamodb</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        </dependency> 
     </dependencies>
 
 </project>

@@ -25,7 +25,7 @@ public class ActorController {
 
 	@Autowired
 	private ActorPortIn actorService;
-    
+	
 	@PostMapping(path = "/", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(value = HttpStatus.OK)
     public Actor save(@RequestBody Actor actor){

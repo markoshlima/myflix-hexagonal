@@ -19,10 +19,10 @@ import org.springframework.context.annotation.PropertySource;
 public class DynamoDBDriver {
 
 	//@Value("${amazon.aws.region}")
-	private String region = "";
+	private String region = "sa-east-1";
 
 	//@Value("${amazon.aws.dynamodb.endpoint}")
-	private String endpoint = "";
+	private String endpoint = "dynamodb.sa-east-1.amazonaws.com";
 
 	//@Value("${amazon.aws.accesskey}")
 	private String accessKey = "";
