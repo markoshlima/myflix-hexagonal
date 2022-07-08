@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.myflix.adapter.grpc.protofiles.movie";
+option java_outer_classname = "MovieProto";
+
+message Movie {
+    string idMovie = 1;
+    string name = 2;
+    int32 year = 3;
+}
+
+message Character {
+  string idMovie = 1;
+  string idActor = 2;
+  string name = 3;
+}
+
+message Watch {
+    string idCustomer = 1;
+    string idMovie = 2;
+    int64 date = 3;
+}
+
+message saveRequest {
+  string name = 1;
+  int32 year = 2;
+}
+
+message saveResponse {
+  Movie movie = 1;
+}
+
+message deleteRequest {
+  string idMovie = 1;
+}
+
+message deleteResponse {
+}
+
+message getAllRequest {
+}
+
+message getAllResponse {
+  Movie movie = 1;
+}
+
+message getRequest {
+  string idCustomer = 1;
+}
+
+message getResponse {
+  Movie movie = 1;
+}
+
+message getCharactersRequest {
+  string idMovie = 1;
+}
+
+message getCharactersResponse {
+}
+
+message getMoviesWatchedRequest {
+  string idMovie = 1;
+}
+
+message getMoviesWatchedResponse {
+  Watch watch = 1;
+}
+
+
+service MovieService {
+  rpc save (saveRequest) returns (saveResponse) {}
+  rpc delete (deleteRequest) returns (deleteResponse) {}
+  rpc getAll (getAllRequest) returns (stream getAllResponse) {}
+  rpc get (getRequest) returns (stream getResponse) {}
+  rpc watch (getCharactersRequest) returns (stream getCharactersResponse) {}
+  rpc getMoviesWatched (getMoviesWatchedRequest) returns (stream getMoviesWatchedResponse) {}
+}

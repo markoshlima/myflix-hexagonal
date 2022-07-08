@@ -1,6 +1,5 @@
 package com.myflix.adapter.grpc.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.myflix.adapter.grpc.protofiles.actor.getAllRequest;
@@ -13,9 +12,11 @@ import com.myflix.domain.model.Actor;
 import com.myflix.domain.port.in.ActorPortIn;
 import io.grpc.stub.StreamObserver;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ActorService extends ActorServiceImplBase {
-    
+
     @Autowired
 	private ActorPortIn actorService;
 

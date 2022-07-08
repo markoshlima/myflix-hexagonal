@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.myflix.adapter.grpc.protofiles.customer";
+option java_outer_classname = "CustomerProto";
+
+message Customer {
+    string idCustomer = 1;
+    string name = 2;
+    int64 birthDate = 3;
+}
+
+message Watch {
+    string idCustomer = 1;
+    string idMovie = 2;
+    int64 date = 3;
+}
+
+message saveRequest {
+  string name = 1;
+  int64 birthDate = 2;
+}
+
+message saveResponse {
+  Customer customer = 1;
+}
+
+message deleteRequest {
+  string idCustomer = 1;
+}
+
+message deleteResponse {
+}
+
+message getAllRequest {
+}
+
+message getAllResponse {
+  Customer customer = 1;
+}
+
+message getRequest {
+  string idCustomer = 1;
+}
+
+message getResponse {
+  Customer customer = 1;
+}
+
+message watchRequest {
+  string idCustomer = 1;
+  string idMovie = 2;
+}
+
+message watchResponse {
+}
+
+message getMoviesWatchedRequest {
+  string idCustomer = 1;
+}
+
+message getMoviesWatchedResponse {
+  Watch watch = 1;
+}
+
+
+service CustomerService {
+  rpc save (saveRequest) returns (saveResponse) {}
+  rpc delete (deleteRequest) returns (deleteResponse) {}
+  rpc getAll (getAllRequest) returns (stream getAllResponse) {}
+  rpc get (getRequest) returns (stream getResponse) {}
+  rpc watch (watchRequest) returns (watchResponse) {}
+  rpc getMoviesWatched (getMoviesWatchedRequest) returns (stream getMoviesWatchedResponse) {}
+}
