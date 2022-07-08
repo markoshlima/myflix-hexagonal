@@ -41,7 +41,7 @@ In this scenario we can supose in this project it is used Cassandra, but for any
 To setup the environment:
 - Pre Requisites:
     - Maven: 3.8.4
-    - On MAC M1 add the run command with `-Dos.arch=x86_64`
+    - On MAC M1, add the install command with `-Dos.arch=x86_64`
 - To run locally without any integration, just use the adapter-repository and comment the adapters cassandra and dynamo inside main pom.xml and pom.xml's usecase folder.
 - To run Cassandra (AWS Keyspace), generate the truststore and AWS credentials for Cassandra following the link: https://docs.aws.amazon.com/keyspaces/latest/devguide/dsbulk-upload-prequs.html
     - Replace your new truststore in `/myflix/adapter-cassandra/src/main/resources/cassandra_truststore.jks`
